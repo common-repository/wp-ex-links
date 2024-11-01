@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>WpExLinks 1.4 Readme</title>
+	<style type="text/css" media="screen">
+		/* Default Style */
+		BODY {
+			font-family: Verdana, Arial;
+			font-size: 12px;
+			color: #434343;
+			background: #FFFFFF;
+			line-height:20px;
+		}
+		P {
+			padding-left: 10px;
+		}
+		BLOCKQUOTE {
+			margin: 10px 20px 0px 20px;
+			padding: 10px;
+			border: 1px solid #8d8d8d;
+			background-color: #f5f5f5;
+		}
+		LI {
+			margin-top: 20px;
+		}
+		UL LI UL LI {
+			margin-top: 10px;
+		}
+		A, A:active, A:link, A:visited {
+			color: #2d3a4c;
+			text-decoration: none;
+		}
+		A:hover {
+			color: #5577a5;
+			text-decoration: underline;
+		}
+		/* Place Holder Style */
+		#Container {
+			width: 780px;
+			margin-left: auto;
+			margin-right: auto; 
+		}
+		#Content {
+			background-color: #fafafa;
+			border: 1px solid #a2b6cb;
+			padding: 10px;
+			margin-top: -13px;
+		}
+		/* Title Style */
+		#Title {
+			font-family: Georgia;
+			font-size: 24px;
+			font-weight: bold;
+			color: #800000;
+			border-bottom: 3px double #ccc;
+			margin-bottom: 10px;
+			padding:20px 0;
+		}
+		.SubTitle {
+			font-family: Verdana, Arial;
+			font-size: 16px;
+			font-weight: bold;
+			color: #800000;
+		}
+		.SubSubTitle {
+			font-family: Verdana, Arial;
+			font-size: 13px;
+			font-weight: bold;
+			color: #800000;
+			padding:15px 0;
+		}
+		/* Tabs */
+		UL#Tabs {
+			font-family: Verdana, Arial;
+			font-size: 12px;
+			font-weight: bold;
+			list-style-type: none;
+			padding-bottom: 28px;
+			border-bottom: 1px solid #a2b6cb;
+			margin-bottom: 12px;
+			z-index: 1;
+		}
+		#Tabs LI.Tab {
+			float: right;
+			height: 25px;
+			background-color: #deedfb;
+			margin: 2px 0px 0px 5px;
+			border: 1px solid #a2b6cb;
+		}
+		#Tabs LI.Tab A {
+			float: left;
+			display: block;
+			color: #666666;
+			text-decoration: none;
+			padding: 5px;
+		}
+		#Tabs LI.Tab A:hover {
+			background-color: #bfe0fe;
+			border-bottom: 1px solid #bfe0fe;
+		}
+		/* Selected Tab */
+		#Tabs LI.SelectedTab {
+			float: right;
+			height: 25px;
+			background-color: #fafafa;
+			margin: 2px 0px 0px 5px;
+			border-top: 1px solid #a2b6cb;
+			border-right: 1px solid #a2b6cb;
+			border-bottom: 1px solid #fafafa;
+			border-left: 1px solid #a2b6cb;
+		}
+		#Tabs LI.SelectedTab A {
+			float: left;
+			display: block;
+			color: #666666;
+			text-decoration: none;
+			padding: 5px;
+			cursor: default;
+		}
+		/* Copyright */
+		#Copyright {
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+	/* <![CDATA[*/
+		// Index Page
+		function index() {
+			// Tab
+			document.getElementById('IndexTab').className = 'SelectedTab';
+			document.getElementById('ChangelogTab').className = 'Tab';
+			document.getElementById('InstallTab').className = 'Tab';
+			document.getElementById('UpgradeTab').className = 'Tab';
+			document.getElementById('UsageTab').className = 'Tab';
+			// Page
+			document.getElementById('Index').style.display= 'block';
+			document.getElementById('Changelog').style.display = 'none';
+			document.getElementById('Install').style.display = 'none';
+			document.getElementById('Upgrade').style.display = 'none';
+			document.getElementById('Usage').style.display = 'none';
+		}
+		// Changelog Page
+		function changelog() {
+			// Tab
+			document.getElementById('IndexTab').className = 'Tab';
+			document.getElementById('ChangelogTab').className = 'SelectedTab';
+			document.getElementById('InstallTab').className = 'Tab';
+			document.getElementById('UpgradeTab').className = 'Tab';
+			document.getElementById('UsageTab').className = 'Tab';
+			// Page
+			document.getElementById('Index').style.display = 'none';
+			document.getElementById('Changelog').style.display = 'block';
+			document.getElementById('Install').style.display = 'none';
+			document.getElementById('Upgrade').style.display = 'none';
+			document.getElementById('Usage').style.display = 'none';
+		}
+		// Installation Page
+		function install() {
+			// Tab
+			document.getElementById('IndexTab').className = 'Tab';
+			document.getElementById('ChangelogTab').className = 'Tab';
+			document.getElementById('InstallTab').className = 'SelectedTab';
+			document.getElementById('UpgradeTab').className = 'Tab';
+			document.getElementById('UsageTab').className = 'Tab';
+			// Page
+			document.getElementById('Index').style.display= 'none';
+			document.getElementById('Changelog').style.display = 'none';
+			document.getElementById('Install').style.display = 'block';
+			document.getElementById('Upgrade').style.display = 'none';
+			document.getElementById('Usage').style.display = 'none';
+		}
+		// Upgrade Page
+		function upgrade() {
+			// Tab
+			document.getElementById('IndexTab').className = 'Tab';
+			document.getElementById('ChangelogTab').className = 'Tab';
+			document.getElementById('InstallTab').className = 'Tab';
+			document.getElementById('UpgradeTab').className = 'SelectedTab';
+			document.getElementById('UsageTab').className = 'Tab';
+			// Page
+			document.getElementById('Index').style.display= 'none';
+			document.getElementById('Changelog').style.display = 'none';
+			document.getElementById('Install').style.display = 'none';
+			document.getElementById('Upgrade').style.display = 'block';
+			document.getElementById('Usage').style.display = 'none';
+		}
+		// Usage Page
+		function usage() {
+			// Tab
+			document.getElementById('IndexTab').className = 'Tab';
+			document.getElementById('ChangelogTab').className = 'Tab';
+			document.getElementById('InstallTab').className = 'Tab';
+			document.getElementById('UpgradeTab').className = 'Tab';
+			document.getElementById('UsageTab').className = 'SelectedTab';
+			// Page
+			document.getElementById('Index').style.display= 'none';
+			document.getElementById('Changelog').style.display = 'none';
+			document.getElementById('Install').style.display = 'none';
+			document.getElementById('Upgrade').style.display = 'none';
+			document.getElementById('Usage').style.display = 'block';
+		}
+	/* ]]> */
+	</script>
+</head>
+<body>
+<div id="Container">
+	<!-- Title -->
+	<div id="Title">WpExLinks 1.4&nbsp;&nbsp;<span style="color: #aaaaaa;">Readme</span></div>
+
+	<!-- Tabs -->
+	<ul id="Tabs">
+		<li id="UsageTab" class="Tab"><a href="#Usage" onclick="usage(); return false;" title="Usage Instructions">Usage</a></li>
+		<li id="UpgradeTab" class="Tab"><a href="#Upgrade" onclick="upgrade(); return false;" title="Upgrade Instructions">Upgrade</a></li>
+		<li id="InstallTab" class="Tab"><a href="#Installation" onclick="install(); return false;" title="Installation Instructions">Installation</a></li>
+		<li id="ChangelogTab" class="Tab"><a href="#Changelog" onclick="changelog(); return false;" title="Changelog">Changelog</a></li>
+		<li id="IndexTab" class="SelectedTab"><a href="#Index" onclick="index(); return false;" title="Index Instructions">Index</a></li>
+	</ul>
+
+	<!-- Content -->
+	<div id="Content">
+		<!-- Index -->
+		<div id="Index">
+			<div class="SubTitle">&raquo; Index</div>
+			<div class="SubSubTitle">Plugin Information</div>
+			<p>
+				<strong>Author:</strong><br />
+				<strong>&raquo;</strong> Ghprod
+			</p>
+			<p>
+				<strong>Website:</strong><br />
+				<strong>&raquo;</strong> <a href="http://blog.smileylover.com/" title="http://blog.smileylover.com/">http://blog.smileylover.com/</a>
+			</p>
+			<p>
+				<strong>Features:</strong><br />
+				<strong>&raquo;</strong> Enables you to do automatic exchange links with another webmaster in Wordpress realm.
+			</p>
+			<p>
+				<strong>Download:</strong><br />
+				<strong>&raquo;</strong> <a href="http://blog.smileylover.com/wordpress-exchange-links-plugin/" title="http://blog.smileylover.com/wordpress-exchange-links-plugin/">WpExLinks 1.4 For WordPress 2.6.x</a>
+			</p>
+			<p>
+				<strong>Screenshots:</strong><br />
+				<strong>&raquo;</strong> Available in WpExLinks pack.
+			</p>
+			<p>
+				<strong>Demo:</strong><br /><strong>&raquo;</strong> <a href="http://blog.smileylover.com/exchange-links/" title="http://blog.smileylover.com/exchange-links/">http://blog.smileylover.com/exchange-links/</a>
+			</p>
+			<p>
+				<strong>Development Page:</strong><br />
+				<strong>&raquo;</strong> <a href="http://blog.smileylover.com/wordpress-exchange-links-plugin/" title="http://blog.smileylover.com/wordpress-exchange-links-plugin/">http://blog.smileylover.com/wordpress-exchange-links-plugin/</a>
+			</p>
+			<p>
+				<strong>Note:</strong><br />
+				<strong>&raquo;</strong> The <strong>Changelog</strong>, <strong>Installation</strong>, <strong>Upgrade</strong>, <strong>Usage</strong> Tab at the top of the page.
+			</p>
+			<p>
+				<strong>Donations:</strong><br />
+				<strong>&raquo;</strong> If you really love my plugins and could spare me a couple of bucks as my school allowance, I will really appericiate it. If not feel free to use it without any obligations. Thank You. My Paypal account is 
+				<script type="text/javascript">
+					/* <![CDATA[*/
+					document.write(' <strong>greenhouseprod@yahoo.co.id</strong>.');
+					/* ]]> */
+				</script>
+			</p>
+		</div>
+
+		<!-- Changelog -->
+		<div id="Changelog" style="display: none;">
+			<div class="SubTitle">&raquo; Changelog</div>
+			<ul>
+				<li>
+					<strong>Version 1.4 (10-11-2008)</strong>
+					<ul>
+						<li>Change default widget to display all links or use 0 to do it</li>
+						<li>Change AJAX system using <a href="http://www.twilightuniverse.com"><b> Simple AJAX Code-Kit (SACK)</b></a> to avoid "Invalid Captcha" problem</li>
+						<li>Fixed minor bugs</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Version 1.3 (16-10-2008)</strong>
+					<ul>
+						<li>Captcha modification, hope will fix compatibility issues</li>
+						<li>NEW : options to enable/disable Captcha</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Version 1.2 (08-10-2008)</strong>
+					<ul>
+						<li>NEW : <b>Edit Link Page!</b></li>
+						<li>Fix: HTML email notification, with Table</li>
+						<li>Add "Submit your link!" link to Exchange Link Page under widget</li>
+						<li>Add permalink to Exchange Link Page in Options Page</li>
+						<li>Add progress image in AJAX sending form</li>
+						<li>Revision for readme.html files and screenshot</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Version 1.1 (07-10-2008)</strong>
+					<ul>
+						<li>NEW: HTML email notification</li>
+						<li>Fix admin area</li>
+						<li>Fix single function to display links list without widget</li>
+						<li>Add description to anchor link as title/alt</li>
+					</ul>
+				</li>				
+				<li>
+					<strong>Version 1.0 (28-09-2008)</strong>
+					<ul>
+						<li>NEW: Initial Release</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Installation Instructions -->
+		<div id="Install" style="display: none;">
+			<div class="SubTitle">&raquo; Installation Instructions</div>
+			<ol>
+				<li>
+					Open <strong>wp-content/plugins</strong> Folder
+				</li>
+				<li>
+					Put:
+					<blockquote>Folder: wpExLinks<br />
+					<small>nb: you can pass screenshot not to upload!</small></blockquote>
+				</li>
+				<li>
+					<strong>Activate</strong> wpExLinks Plugin and wpExLinks widget
+				</li>
+				<li>
+					Refer To <strong>Usage</strong> For Further Instructions
+				</li>
+			</ol>
+		</div>
+
+		<!-- Upgrade Instructions -->	
+		<div id="Upgrade" style="display: none;">
+			<div class="SubTitle">&raquo; Upgrade Instructions</div>
+			<ol>
+				<li>
+					<strong>Deactivate</strong> wpExLinks Plugin
+				</li>
+				<li>
+					Open <strong>wp-content/plugins</strong> Folder
+				</li>
+				<li>
+					Put/Overwrite:
+					<blockquote>Folder: wpExLinks<br />
+					<small>nb: you can pass screenshot not to upload!</small></blockquote>
+				</li>
+				<li>
+					<strong>Activate</strong> wpExLinks Plugin
+				</li>
+				<li>
+					Refer To <strong>Usage</strong> For Further Instructions
+				</li>
+			</ol>
+		</div>
+
+		<!-- Usage Instructions -->	
+		<div id="Usage" style="display: none;">
+			<div class="SubTitle">&raquo; Usage Instructions</div>
+			<div class="SubSubTitle">General Usage</div>
+<blockquote>
+Please create a new page first and write this code into textarea in <b>HTML CODE</b>.  Title new page is up to you :) <br />
+<span style="color:green">&lt;!--wpExLinks--&gt;</span>
+<br /><br />
+This will auto generate a form to do exchange links! Simple! (Screenshot no. 2 & 3.)
+</blockquote>
+			<ol>
+				<li>
+					Go to <strong>'WP-Admin -> Settings -> Wp Exchange Links'</strong> to configure the plugin. (Screenshot no. 1.) 
+					<p>
+					Please copy permalink from Exchange Link Page and fill in "Permalink of Exchange Links Page" options!
+					</p>
+				</li>
+				<li>
+					Open <strong>wp-content/themes/&lt;YOUR THEME NAME&gt;/index.php</strong>
+					<p>You may place it in <strong>single.php</strong>, <strong>post.php</strong> or <strong>page.php</strong> also.</p>
+				</li>
+				<li>
+					Add Anywhere You Like This Code In Your Themes, <b>NOT</b> Post/Page writing textarea except you have <b>execPHP plugin</b> installed !
+<blockquote><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #007700">if(</span><span style="color: #0000BB">function_exists</span><span style="color: #007700">(</span><span style="color: #DD0000">'wpExLinksList'</span><span style="color: #007700">))&nbsp;{</span><span style="color: #0000BB">wpExLinksList</span><span style="color: #007700">();}&nbsp;</span><span style="color: #0000BB">?&gt;</span>
+</span>
+</blockquote>
+<p>
+The <strong>first value</strong> you pass in is limit number to display links.<br />
+The <strong>second value</strong> you pass in is what you want to order list by Name or ID.<br />
+The <strong>third value</strong> you pass in is what you want to order list by ASCENDING or DESCENDING.</p>
+<p>Default: <b>wpExLinksList(0, 'name', 'ASC');</b> -> Display all links and order list by Name in ASCENDING.</p>
+				</li>
+				
+			</ol>
+			<div class="SubSubTitle">View Links (With Widgets)</div>
+			<ol>
+				<li>
+					<strong>Activate</strong> wpExLinks Widget Plugin
+				</li>
+				<li>
+					Go to '<strong>WP-Admin -> Design -> Widgets</strong>'
+				</li>
+				<li>
+					Add Wp Ex Links Widget by clicking on the <b>Add</b> link besides it.
+				</li>
+				<li>
+					After adding, you can <strong>configure</strong> Wp Ex Links Widget by clicking on the 'Edit' link besides it. (Screenshot no. 4.) 
+				</li>
+				<li>
+					Click 'Save Changes'
+				</li>
+			</ol>	
+
+			<div class="SubSubTitle">Manage Links in Options Page</div>
+			<ol>
+				<li>
+				In <b>Wp Exchange Links Options Page</b> you can manage link :
+					<ul>
+						<li>Delete</li>
+						<li>Approve</li>
+						<li>Unapprove</li>
+						<li>Check Reciprocal Link Status</li>
+						<li><b>Edit Link Details!</b> (Screenshot no. 6)</li>
+					</ul>
+				</li>
+				<li>
+				Also you can <b>add new link</b> in bottom options page.
+				</li>
+			</ol>
+	</div>
+</div>
+<p id="Copyright"><b><br />
+<a href="http://smileylover.com/" title="Friendster Smiley, MySpace Smiley, Forum Smiley">SmileyLover</a> |
+<a href="http://mp3.smileylover.com/" title="Friendster MP3, Free MP3 Player Codes">Friendster MP3</a> |
+<a href="http://rapidcheck.co.nr/" title="Universal AJAX Link Checker">AJAX Link Checker</a> |
+<a href="http://imageremoter.co.nr/" title="Imageshack.Us Batch Remote Uploader">Image Remoter</a> |
+<a href="http://text2image.co.nr/" title="Cool Text 2 Image PNG">Text 2 Image</a></b>
+<br /><br />
+WpExLinks 1.1<br />Copyright &copy; 2008 SmileyLover. All Rights Reserved.<br />
+- Inspired by ReadMe File of Lester 'GaMerZ' Chan -</p>
+</body>
+</html>
